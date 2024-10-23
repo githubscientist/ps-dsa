@@ -67,3 +67,36 @@ The numbers which are not Happy are called Unhappy Numbers.
 Examples: 2, 3, 4, 5, 6, 8, 9, 11, 12, 14, 15, 16, 17, 18, 20, 21, 22, 24, 25, 26, 27, 28, 30
 
 ## Patterns
+
+Homeworks from Guvi/Codekata/Patterns
+
+## Schedule
+
+Day 1: 21st Oct: Problem Solving Techniques
+Day 2: 22nd Oct: Patterns
+Day 3: 23rd Oct: Arrays - Basics
+Day 4: 24th Oct: Arrays - Advanced + Time Complexity
+Day 5: 25th Oct: Strings - Basics
+Day 6: 26th Oct: Strings - Advanced
+Day 7: 28th Oct: Sorting Algorithms - Bubble, Insertion, Selection, Counting, Merge
+Day 8: 29th Oct: Searching Algorithms - Linear, Binary, Ternary
+Day 9: 30th Oct: Linked Lists - Singly, Doubly, Circular
+Day 10: 1st Nov: Stacks and Queues
+
+# Arrays - Basic Problems (Homeworks + Exercises)
+
+1. Given an array of integers and the number, find only the factors of the number.
+2. Given two arrays, find the common elements between the two arrays.
+3. Given an array of integers, find the maximum element in the array.
+4. Given an array of numbers, find the frequency of each element in the array.
+5. Given an array of integers, find the sum of all the elements in the array.
+6. Given an array of integers, find the first non-repeating element in the array.
+7. Given two sorted arrays, merge the two arrays into a single sorted array.
+8. Given an array of integers, find the second largest element in the array.
+   **9. Given an array of integers, find the kth largest element in the array.**
+   **9. Given an array of integers and a number, find the number of pairs of elements in the array whose sum is equal to the given number.**
+   **11. Given a list of numbers, find the maximum sum of subarray.**
+9. Given an array of numbers and 0's, move all the 0's to the end of the array.
+   **10. Given an array of integers, find the maximum difference between two elements in the array such that the smaller element appears before the larger element.**
+   **14. Given an array of integers, find and print all the combinations of the elements in the array.**
+10. Given an array and a value k, rotate the array to the right by k steps.
