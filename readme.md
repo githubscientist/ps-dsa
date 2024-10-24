@@ -92,11 +92,139 @@ Day 10: 1st Nov: Stacks and Queues
 5. Given an array of integers, find the sum of all the elements in the array.
 6. Given an array of integers, find the first non-repeating element in the array.
 7. Given two sorted arrays, merge the two arrays into a single sorted array.
-8. Given an array of integers, find the second largest element in the array.
-   **9. Given an array of integers, find the kth largest element in the array.**
-   **9. Given an array of integers and a number, find the number of pairs of elements in the array whose sum is equal to the given number.**
-   **11. Given a list of numbers, find the maximum sum of subarray.**
-9. Given an array of numbers and 0's, move all the 0's to the end of the array.
-   **10. Given an array of integers, find the maximum difference between two elements in the array such that the smaller element appears before the larger element.**
-   **14. Given an array of integers, find and print all the combinations of the elements in the array.**
-10. Given an array and a value k, rotate the array to the right by k steps.
+
+Example:
+
+Input: [1, 3, 5], [2, 4, 6]
+Output: [1, 2, 3, 4, 5, 6]
+
+Algorithm 1: Merge and Sort
+
+1. Get the two arrays
+2. Merge the two arrays into a single array
+3. Sort the merged array
+4. Return the sorted array
+
+Time Complexity: O(m + n)
+
+Algorithm 2: Insertion Sort
+
+1. Get the two arrays
+2. Iterate the smallest array
+3. For each element in the smallest array, insert the element into the largest array at the correct position
+4. Return the largest array
+
+Time Complexity: O(m \* n)
+
+Algorithm 3: Merge Sort
+
+1. Get the two arrays
+2. Place two pointers at the start of the two arrays
+3. Create a new arrar <- mergedArray
+4. Compare the elements at the two pointers
+5. If the element in the first array is smaller, add it to the mergedArray and increment the pointer in the first array
+6. If the element in the second array is smaller, add it to the mergedArray and increment the pointer in the second array
+7. Repeat the process until the end of the arrays
+8. After the end of the arrays, add the remaining elements in the arrays to the mergedArray
+9. Return the mergedArray
+
+Time Complexity: O(m + n)
+
+10. Given an array of integers, find the second largest element in the array.
+    **9. Given an array of integers, find the kth largest element in the array.**
+    **9. Given an array of integers and a number, find the number of pairs of elements in the array whose sum is equal to the given number.**
+    **11. Given a list of numbers, find the maximum sum of subarray.**
+11. Given an array of numbers and 0's, move all the 0's to the end of the array.
+    **10. Given an array of integers, find the maximum difference between two elements in the array such that the smaller element appears before the larger element.**
+    **14. Given an array of integers, find and print all the combinations of the elements in the array.**
+12. Given an array and a value k, rotate the array to the right by k steps.
+
+# Time Complexity
+
+In order to compare the efficiency of the algorithms, we need the performance metrics.
+
+1. Time Complexity: The amount of time required by the algorithm to run as a function of the input size.
+2. Space Complexity: The amount of memory required by the algorithm to run as a function of the input size.
+
+To represent the time complexity, mathematically, we have notations called as "Asymptotic Notations".
+
+Asymptotic Notations:
+
+1. Big O Notation: Upper Bound
+2. Omega Notation: Lower Bound
+3. Theta Notation: Tight Bound
+
+From these we use the Big O Notation to represent the time complexity of the algorithms. (Worst Case)
+
+Example:
+
+Given an array of elements and an element to search, if we use linear search algorithm, the different cases are:
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+element = 1 (first element)
+
+comparisons or execution steps: 1
+
+The above is called as the best case scenario. The time complexity of the algorithm is O(1).
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+element = 5 (middle element)
+
+comparisons or execution steps: 5
+
+The above is called as the average case scenario. The time complexity of the algorithm is O(n/2) => O(n).[Because 1/2 is a constant and we ignore constants]
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+element = 10 (last element) or 11 (element not in the array)
+
+comparisons or execution steps: 10
+
+The above is called as the worst case scenario. The time complexity of the algorithm is O(n).
+
+# Two Pointers Technique
+
+- Problem: Given two sorted arrays, merge the two arrays into a single sorted array.
+
+# Hashing Technique
+
+- Problem: Given an array, find and print the frequency of each element in the array.
+
+Input: [1, 2, 3, 4, 5, 1, 2, 3, 4, 1, 2, 1, 1, 1, 1]
+
+Output: {1: 7, 2: 3, 3: 2, 4: 2, 5: 1}
+
+- Problem: Given an array, find and print the first non-repeating element in the array.
+
+Input: [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6]
+
+Output: 6
+
+- Problem: Given an array, remove all the duplicates in the array.
+
+Input: [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6]
+
+Output: [1, 2, 3, 4, 5, 6]
+
+- Problem: Given an array, remove all the duplicates along with the first occurrence of the element and print the remaining elements.
+
+Input: [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6]
+
+Output: [6]
+
+- Problem: Given an array, find and print the common elements between the two arrays.
+
+Input: [1, 2, 3, 4, 5], [2, 4, 6]
+
+Output: [2, 4]
+
+- Problem: Given an array, find the most occuring element.
+
+Input: [1, 2, 3, 4, 5, 1, 2, 3, 4, 1, 2, 1, 1, 1, 1]
+
+Output: 1
+
+- Problem: Given an array, find the least occuring element.
+
+Input: [1, 2, 3, 4, 5, 1, 2, 3, 4, 1, 2, 1, 1, 1, 1]
+
+Output: 5
