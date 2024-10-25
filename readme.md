@@ -77,11 +77,11 @@ Day 2: 22nd Oct: Patterns
 Day 3: 23rd Oct: Arrays - Basics
 Day 4: 24th Oct: Arrays - Advanced + Time Complexity
 Day 5: 25th Oct: Strings - Basics
-Day 6: 26th Oct: Strings - Advanced
-Day 7: 28th Oct: Sorting Algorithms - Bubble, Insertion, Selection, Counting, Merge
-Day 8: 29th Oct: Searching Algorithms - Linear, Binary, Ternary
-Day 9: 30th Oct: Linked Lists - Singly, Doubly, Circular
-Day 10: 1st Nov: Stacks and Queues
+Day 6: 28th Oct: Strings - Advanced
+Day 7: 29th Oct: Sorting Algorithms - Bubble, Insertion, Selection, Counting, Merge
+Day 8: 30th Oct: Searching Algorithms - Linear, Binary, Ternary
+Day 9: 1st Nov: Linked Lists - Singly, Doubly, Circular
+Day 10: 2nd Nov: Stacks and Queues
 
 # Arrays - Basic Problems (Homeworks + Exercises)
 
@@ -120,7 +120,7 @@ Algorithm 3: Merge Sort
 
 1. Get the two arrays
 2. Place two pointers at the start of the two arrays
-3. Create a new arrar <- mergedArray
+3. Create a new array <- mergedArray
 4. Compare the elements at the two pointers
 5. If the element in the first array is smaller, add it to the mergedArray and increment the pointer in the first array
 6. If the element in the second array is smaller, add it to the mergedArray and increment the pointer in the second array
@@ -228,3 +228,305 @@ Output: 1
 Input: [1, 2, 3, 4, 5, 1, 2, 3, 4, 1, 2, 1, 1, 1, 1]
 
 Output: 5
+
+# Time Complexity Exercises
+
+```javascript
+let m, n;
+let a, b;
+
+for (let i = 0; i < m; i++) {
+  a = a + Math.random();
+}
+
+for (let i = 0; i < n; i++) {
+  b = b + Math.random();
+}
+```
+
+Options:
+
+1. O(1)
+2. O(log n)
+3. O(n)
+4. O(n log n)
+5. O(n^2)
+6. O(2^n)
+7. O(n!)
+
+Solution:
+
+```javascript
+let m, n;
+let a, b;
+```
+
+number of executions: 1 [Constant time: declarations, assignments, expressions, initializations, if conditions, etc.]
+
+```javascript
+for (let i = 0; i < m; i++) {
+  a = a + Math.random();
+}
+```
+
+number of executions: m [Linear time: for loop]
+
+```javascript
+for (let i = 0; i < n; i++) {
+  b = b + Math.random();
+}
+```
+
+number of executions: n [Linear time: for loop]
+
+Total time complexity,
+
+T(m, n)
+= 1 + m + n
+= m + n [Ignoring constants]
+= O(m + n) [Big O Notation]
+
+```javascript
+let n;
+let a, b;
+
+for (let i = 0; i < n; i++) {
+  a = a + Math.random();
+  for (let j = 0; j < n; j++) {
+    b = b + Math.random();
+  }
+}
+```
+
+Solution: Method 2
+
+1. Make some assumptions
+
+n = 4
+n = 5
+n = 6
+
+2. Calculate the number of executions of each of the assumption
+
+n = 4
+
+     i = 0; j = 0, 1, 2, 3; => 4 executions
+     i = 1; j = 0, 1, 2, 3; => 4 executions
+     i = 2; j = 0, 1, 2, 3; => 4 executions
+     i = 3; j = 0, 1, 2, 3; => 4 executions
+
+     Total number of executions: 4 + 4 + 4 + 4 = 16
+
+n = 5
+
+         i = 0; j = 0, 1, 2, 3, 4; => 5 executions
+         i = 1; j = 0, 1, 2, 3, 4; => 5 executions
+         i = 2; j = 0, 1, 2, 3, 4; => 5 executions
+         i = 3; j = 0, 1, 2, 3, 4; => 5 executions
+         i = 4; j = 0, 1, 2, 3, 4; => 5 executions
+
+         Total number of executions: 5 + 5 + 5 + 5 + 5 = 25
+
+n = 6
+
+             i = 0; j = 0, 1, 2, 3, 4, 5; => 6 executions
+             i = 1; j = 0, 1, 2, 3, 4, 5; => 6 executions
+             i = 2; j = 0, 1, 2, 3, 4, 5; => 6 executions
+             i = 3; j = 0, 1, 2, 3, 4, 5; => 6 executions
+             i = 4; j = 0, 1, 2, 3, 4, 5; => 6 executions
+             i = 5; j = 0, 1, 2, 3, 4, 5; => 6 executions
+
+             Total number of executions: 6 + 6 + 6 + 6 + 6 + 6 = 36
+
+3. Generalize the number of executions
+
+n = 4, number of executions: 4^2 = 16
+n = 5, number of executions: 5^2 = 25
+n = 6, number of executions: 6^2 = 36
+
+For a given n, number of executions: n^2
+
+4. Calculate the time complexity
+
+T(n)
+= 1 + n^2
+= n^2 [Ignoring constants]
+= O(n^2) [Big O Notation]
+
+```javascript
+let n;
+let a, b;
+
+for (let i = 0; i < n; i++) {
+  a = a + Math.random();
+  for (let j = i + 1; j >= 0; j--) {
+    b = b + Math.random();
+  }
+}
+```
+
+1. Make some assumptions
+
+n = 4
+n = 5
+n = 6
+
+2. Calculate the number of executions of each of the assumption
+
+n = 4
+
+     i = 0; j = 0; => 1 execution
+     i = 1; j = 1, 0; => 2 executions
+     i = 2; j = 2, 1, 0; => 3 executions
+     i = 3; j = 3, 2, 1, 0; => 4 executions
+
+     Total number of executions: 1 + 2 + 3 + 4 = 10
+
+n = 5
+
+         i = 0; j = 0; => 1 execution
+         i = 1; j = 1, 0; => 2 executions
+         i = 2; j = 2, 1, 0; => 3 executions
+         i = 3; j = 3, 2, 1, 0; => 4 executions
+         i = 4; j = 4, 3, 2, 1, 0; => 5 executions
+
+         Total number of executions: 1 + 2 + 3 + 4 + 5 = 15
+
+n = 6
+
+             i = 0; j = 0; => 1 execution
+             i = 1; j = 1, 0; => 2 executions
+             i = 2; j = 2, 1, 0; => 3 executions
+             i = 3; j = 3, 2, 1, 0; => 4 executions
+             i = 4; j = 4, 3, 2, 1, 0; => 5 executions
+             i = 5; j = 5, 4, 3, 2, 1, 0; => 6 executions
+
+             Total number of executions: 1 + 2 + 3 + 4 + 5 + 6 = 21
+
+3. Generalize the number of executions
+
+n = 4, number of executions: 1 + 2 + 3 = 6
+n = 5, number of executions: 1 + 2 + 3 + 4 = 10
+n = 6, number of executions: 1 + 2 + 3 + 4 + 5 = 15
+
+for a given n, number of executions = n \* (n+1)/2
+
+4. Calculate the time complexity
+
+T(n)
+= 1 + n _ (n+1)/2
+= n _ (n+1)/2 [Ignoring constants]
+= 1/2(n^2 + n)
+= n^2 + n
+= n^2 [Considering the highest power]
+= O(n^2) [Big O Notation]
+
+```javascript
+let n;
+let a, b;
+
+for (let i = 1; i <= n; i++) {
+  a = a + Math.random();
+  for (let j = 2; j <= n; j *= 2) {
+    b = b + Math.random();
+  }
+}
+```
+
+1. Make some assumptions
+
+n = 4
+n = 5
+n = 6
+
+2. Calculate the number of executions of each of the assumption
+
+n = 4, j = 2, 4 => 2 executions
+n = 10, j = 2, 4, 8 => 3 executions
+n = 20, j = 2, 4, 8, 16 => 4 executions
+n = 39, j = 2, 4, 8, 16, 32 => 5 executions
+n = 40, j = 2, 4, 8, 16, 32 => 5 executions
+n = 41, j = 2, 4, 8, 16, 32 => 5 executions
+
+3. Generalize the number of executions
+
+n = 4, number of executions: 2
+n = 10, number of executions: 3
+n = 20, number of executions: 4
+n = 39, number of executions: 5
+n = 40, number of executions: 5
+n = 41, number of executions: 5
+
+for a given n, number of executions = log(n)
+
+4. Calculate the time complexity
+
+T(n)
+= 1 + n _ log(n)
+= n _ log(n) [Ignoring constants]
+= O(n log n) [Big O Notation]
+
+Problem: Given a string, find and print all the permutations of the string.
+
+Example:
+
+Input: "abc"
+
+Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+
+Input: "abcd"
+
+Output: ["abcd", "abdc", "acbd", "acdb", "adbc", "adcb", "bacd", "badc", "bcad", "bcda", "bdac", "bdca", "cabd", "cadb", "cbad", "cbda", "cdab", "cdba", "dabc", "dacb", "dbac", "dbca", "dcab", "dcba"]
+
+Input : "ab"
+
+Output: ["ab", "ba"]
+
+Problem: Given a string, find and print all the combinations of the string.
+
+Example:
+
+Input: "abc"
+
+Output: ["a", "b", "c", "ab", "ac", "bc", "abc"]
+
+Input: "abcd"
+
+Output: ["a", "b", "c", "d", "ab", "ac", "ad", "bc", "bd", "cd", "abc", "abd", "acd", "bcd", "abcd"]
+
+Input: "ab"
+
+Output: ["a", "b", "ab"]
+
+## Strings - Basic Problems (Homeworks + Exercises)
+
+1. Given a string, find and print the length of the string.
+2. Given a string, find and print the reverse of the string.
+3. Given a string, find and print the number of words in the string.
+4. Given a string, find and print the number of vowels in the string.
+5. Given a string, find and print the number of consonants in the string.
+6. Given a string, convert the string to uppercase and print the string.
+7. Given a string, convert the string to lowercase and print the string.
+8. Given a string, count the number of uppercase letters, lowercase letters, digits, and special characters in the string.
+9. Given a string, check whether the string is a palindrome or not.
+10. Given a string, check whether the string is a palindrome or not without using any extra space.
+11. Given a two strings, check whether the two strings are anagrams of each other or not.
+12. Given a string, find and print the first non-repeating character in the string.
+13. Given a string, find and print all the occurences of each character in the string.
+14. Given a string, check whether the string has all the alphabets from a to z or not. Assume the string is case-insensitive.
+15. Given a string, find the longest substring without repeating characters.
+16. Given a string, find the longest palindrome substring in the string.
+17. Given two strings, find the longest common substring between the two strings.
+18. Given two strings, find the number of occurences of the second string in the first string.
+19. Given a string like 'a3b2c1d3', decode the string to 'aaabbcddd'.
+20. Given two strings s1 and s2, check whether s2 is a rotation of s1 or not.
+21. Given a string, find and print all the permutations of the string.
+22. Given a string, find and print all the combinations of the string.
+23. Given a binary string, count the number of substrings with an equal number of 0's and 1's.
+24. Given a string with parentheses, check whether the string is valid or not.
+25. Given a string, sort the characters in the string based on the frequency of the characters.
+
+- String Traversals
+- String Operations
+- String Manipulations (Strings are immutable)
+- Recursion
