@@ -78,8 +78,8 @@ Day 3: 23rd Oct: Arrays - Basics
 Day 4: 24th Oct: Arrays - Advanced + Time Complexity
 Day 5: 25th Oct: Strings - Basics
 Day 6: 28th Oct: Strings - Advanced
-Day 7: 29th Oct: Sorting Algorithms - Bubble, Insertion, Selection, Counting, Merge
-Day 8: 30th Oct: Searching Algorithms - Linear, Binary, Ternary
+Day 7: 30th Oct: Sorting Algorithms - Bubble, Insertion, Selection, Counting, Merge
+Day 8: 1st Nov: Searching Algorithms - Linear, Binary, Ternary
 Day 9: 1st Nov: Linked Lists - Singly, Doubly, Circular
 Day 10: 2nd Nov: Stacks and Queues
 
@@ -530,3 +530,16 @@ Output: ["a", "b", "ab"]
 - String Operations
 - String Manipulations (Strings are immutable)
 - Recursion
+
+## Bubble Sort
+
+- Problem: Given an array of integers, find the second largest element in the array.
+- Problem: Given an array of integers, find the kth largest element in the array.
+
+## Homeworks
+
+1. Modify the bubble sort algorithm to stop the sorting process if the elements are already sorted.
+2. Find the kth largest element in the array using the bubble sort algorithm.
+3. Given a nearly sorted array (each element is at most k positions away from its sorted position), sort the array using the insertion sort algorithm.
+4. Given two unsorted arrays, merge the arrays into a single sorted array.
+5. Given two unsorted arrays, find the median of the two arrays.
