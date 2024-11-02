@@ -543,3 +543,5 @@ Output: ["a", "b", "ab"]
 3. Given a nearly sorted array (each element is at most k positions away from its sorted position), sort the array using the insertion sort algorithm.
 4. Given two unsorted arrays, merge the arrays into a single sorted array.
 5. Given two unsorted arrays, find the median of the two arrays.
+
+![alt text](image.png)
