@@ -79,9 +79,9 @@ Day 4: 24th Oct: Arrays - Advanced + Time Complexity
 Day 5: 25th Oct: Strings - Basics
 Day 6: 28th Oct: Strings - Advanced
 Day 7: 30th Oct: Sorting Algorithms - Bubble, Insertion, Selection, Counting, Merge
-Day 8: 1st Nov: Searching Algorithms - Linear, Binary, Ternary
-Day 9: 1st Nov: Linked Lists - Singly, Doubly, Circular
-Day 10: 2nd Nov: Stacks and Queues
+Day 8: 2nd Nov: Searching Algorithms - Linear, Binary, Ternary
+Day 9: 3rd Nov: Linked Lists - Singly, Doubly, Circular
+Day 10: 4th Nov: Stacks and Queues
 
 # Arrays - Basic Problems (Homeworks + Exercises)
 
