@@ -38,10 +38,25 @@ class LinkedList {
     }
 
     isPalindrome(head) {
-        if (head === null) return;
+        let ohead = head;
 
-        this.isPalindrome(head.next);
-        console.log(head.data);
+        const checkPalindrome = (head) => {
+            if (head === null) return;
+
+            checkPalindrome(head.next);
+
+            if (ohead.data !== head.data) {
+                return false;
+            }
+
+            ohead = ohead.next;
+
+            if (ohead === null) {
+                return true;
+            }
+        }
+
+        return checkPalindrome(head);
     }
 }
 

@@ -545,3 +545,14 @@ Output: ["a", "b", "ab"]
 5. Given two unsorted arrays, find the median of the two arrays.
 
 ![alt text](image.png)
+
+### Stacks
+
+Stack:
+
+- A linear data structure that follows the Last In First Out (LIFO) principle.
+- LIFO: The element that is inserted last is the element that is deleted first.
+- Operations: Push, Pop, Peek, isEmpty.
+- Can be implemented in two ways:
+  - Using Arrays,
+  - Using Linked Lists.
